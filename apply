@@ -1,0 +1,2 @@
+#!/usr/bin/env bash
+terraform apply --var-file=settings/common.tfvars --auto-approve
