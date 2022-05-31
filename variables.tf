@@ -41,7 +41,7 @@ variable "hostname" {
 
 variable "storage_device_prefix" {
   type        = string
-  description = "block storage device prefix, should probably be sda nvme0n1 or vda"
+  description = "block storage device prefix, should probably be sda, nvme0n1 or vda"
   default     = "vda"
 }
 

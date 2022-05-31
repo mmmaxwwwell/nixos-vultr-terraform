@@ -11,12 +11,12 @@ terraform {
   }
 }
 
-provider "gandi" {
-  key = var.gandi_key
-}
+# provider "gandi" {
+#   key = var.gandi_key
+# }
 
-provider "vultr" {
-  api_key = var.vultr_api_key
-  rate_limit = 700
-  retry_limit = 3
-}
+# provider "vultr" {
+#   api_key = var.vultr_api_key
+#   rate_limit = 700
+#   retry_limit = 3
+# }
