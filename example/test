@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+terraform init 
+./apply
+ssh -o StrictHostKeychecking=no root@$(cat settings/common.tfvars | grep hostname | grep -oE '\".*\"' | tr -d \").$(cat settings/common.tfvars | grep root_domain | grep -oE '\".*\"' | tr -d \") -p $(cat settings/common.tfvars | grep ssh_port | grep -oE '\".*\"' | tr -d \") uname -a
+./destroy
