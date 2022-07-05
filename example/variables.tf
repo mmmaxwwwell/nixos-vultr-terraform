@@ -58,7 +58,7 @@ variable "vultr_instance_plan" {
 }
 
 variable "ssh_port" {
-  type        = string
+  type        = number
   description = "ssh port the vultr instance listens on"
-  default     = "22"
+  default     = 22
 }

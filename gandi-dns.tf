@@ -19,22 +19,7 @@ resource "gandi_livedns_record" "hostname" {
   ]
 
   depends_on = [
-    vultr_instance.beacon_1,
-  ]
-}
-
-resource "gandi_livedns_record" "hostname-wildcard" {
-  zone = "${data.gandi_livedns_domain.root_domain.id}"
-  name = "*.${var.hostname}"
-  type = "A"
-  ttl = 300
-  
-  values = [
-    "${vultr_instance.beacon_1.main_ip}"
-  ]
-
-  depends_on = [
-    vultr_instance.beacon_1,
+    vultr_instance.beacon_1
   ]
 }
 

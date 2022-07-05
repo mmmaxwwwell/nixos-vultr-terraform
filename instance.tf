@@ -40,6 +40,10 @@ data "template_file" "init" {
     hostname = "${var.hostname}"
     storage_device_prefix = "${var.storage_device_prefix}"
     ssh_port = "${var.ssh_port}"
-    ssh_authorized_key = "${var.ssh_authorized_key}"
+    ssh_authorized_key = var.ssh_authorized_key
   }
+}
+
+output install_script { 
+  value = data.template_file.init.rendered
 }

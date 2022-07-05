@@ -17,8 +17,6 @@ sed -i 'x;$${s/}$//;p;x;};1d' /mnt/etc/nixos/configuration.nix
 
 #append our config
 cat >> /mnt/etc/nixos/configuration.nix <<EOF
-
-
   boot.loader.grub.device = "/dev/${storage_device_prefix}";
   
   users.mutableUsers = false;
@@ -39,5 +37,10 @@ cat >> /mnt/etc/nixos/configuration.nix <<EOF
   networking.hostName = "${hostname}";
 }
 EOF
+
+echo "getting ready to install nixos"
+echo "configuration----------------------------------------:"
+cat /mnt/etc/nixos/configuration.nix
+echo "configuration----------------------------------------:"
 
 nixos-install --no-root-passwd
