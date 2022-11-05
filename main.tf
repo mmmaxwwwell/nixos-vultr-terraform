@@ -4,9 +4,9 @@ terraform {
       source = "vultr/vultr"
       version = "2.9.1"
     }
-    gandi = {
-      source = "psychopenguin/gandi"
-      version = "2.0.0-rc3"
+    digitalocean = {
+      source = "digitalocean/digitalocean"
+      version = "2.23.0"
     }
   }
 }

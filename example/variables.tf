@@ -1,6 +1,6 @@
-variable "gandi_key" {
+variable "digitalocean_key" {
   type        = string
-  description = "gandi key"
+  description = "digitalocean key"
 }
 
 variable "vultr_api_key" {

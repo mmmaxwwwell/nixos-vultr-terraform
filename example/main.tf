@@ -4,15 +4,15 @@ terraform {
       source = "vultr/vultr"
       version = "2.9.1"
     }
-    gandi = {
-      source = "psychopenguin/gandi"
-      version = "2.0.0-rc3"
+    digitalocean = {
+      source = "digitalocean/digitalocean"
+      version = "2.23.0"
     }
   }
 }
 
-provider "gandi" {
-  key = var.gandi_key
+provider "digitalocean" {
+  key = var.digitalocean_key
 }
 
 provider "vultr" {
@@ -23,7 +23,7 @@ provider "vultr" {
 
 module "test" {
   source                = "./.."
-  gandi_key             = var.gandi_key
+  digitalocean_key      = var.digitalocean_key
   vultr_api_key         = var.vultr_api_key
   stack_name            = var.stack_name
   root_domain           = var.root_domain
