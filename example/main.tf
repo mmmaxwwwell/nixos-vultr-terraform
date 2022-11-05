@@ -12,7 +12,7 @@ terraform {
 }
 
 provider "digitalocean" {
-  key = var.digitalocean_key
+  token = var.digitalocean_key
 }
 
 provider "vultr" {
