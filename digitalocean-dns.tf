@@ -1,6 +1,6 @@
-# resource "digitalocean_domain" "default" {
-#   name = "${var.root_domain}"
-# }
+data "digitalocean_domain" "default" {
+  name = "${var.root_domain}"
+}
 
 resource "digitalocean_record" "root" {
   domain = digitalocean_domain.default.id
@@ -9,6 +9,7 @@ resource "digitalocean_record" "root" {
   value  = "${vultr_instance.beacon_1.main_ip}"
   depends_on = [
     vultr_instance.beacon_1,
+    digitalocean_domain.default
   ]
 }
 
