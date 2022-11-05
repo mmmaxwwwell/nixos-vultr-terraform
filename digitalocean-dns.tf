@@ -17,7 +17,7 @@ resource "digitalocean_record" "wildcard" {
   domain = data.digitalocean_domain.default.id
   type   = "CNAME"
   name   = "*"
-  value  = "${var.root_domain}"
+  value  = "${var.root_domain}."
   depends_on = [
     vultr_instance.beacon_1,
     digitalocean_record.root

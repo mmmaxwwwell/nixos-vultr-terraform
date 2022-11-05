@@ -62,3 +62,9 @@ variable "ssh_port" {
   description = "ssh port the vultr instance listens on"
   default     = "22"
 }
+
+variable ddos_protection {
+  type = bool
+  description = "if ddos_protection is enabled on the vultr instance."
+  default = false
+}

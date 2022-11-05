@@ -5,7 +5,7 @@ resource "vultr_instance" "beacon_1" {
   label = "${var.stack_name}-${var.env}-${var.hostname}"
   hostname = "${var.hostname}"
   enable_ipv6 = true
-  ddos_protection = true
+  ddos_protection = var.ddos_protection
   activation_email = false
 
   connection {

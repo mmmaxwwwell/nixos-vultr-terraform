@@ -1,2 +1,3 @@
 #!/usr/bin/env bash
+ssh-add -l || ssh-add
 terraform apply --var-file=settings/common.tfvars --auto-approve
