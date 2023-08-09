@@ -62,3 +62,9 @@ variable "ssh_port" {
   description = "ssh port the vultr instance listens on"
   default     = "22"
 }
+
+variable "ddos_protection" {
+  type        = bool
+  description = "enable ddos protection from vultr or not (extra $10usd/mo at time of writing)"
+  default     = false
+}
